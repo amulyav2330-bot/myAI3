@@ -233,7 +233,7 @@ export default function Chat() {
           </div>
         </div>
         <div className="w-full px-5 py-1 items-center flex justify-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Daniel M. Ringel <Link href="/terms" className="underline">Terms of Use</Link>
+          © {new Date().getFullYear()} Daniel M. Ringel&nbsp;<Link href="/terms" className="underline">Terms of Use</Link>
         </div>
       </main>
     </div >
