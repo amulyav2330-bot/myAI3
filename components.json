@@ -1,22 +1,113 @@
-{
-  "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "new-york",
-  "rsc": true,
-  "tsx": true,
-  "tailwind": {
-    "config": "",
-    "css": "app/globals.css",
-    "baseColor": "neutral",
-    "cssVariables": true,
-    "prefix": ""
-  },
-  "iconLibrary": "lucide",
-  "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
-  },
-  "registries": {}
+import React from "react";
+
+/**
+ * Stylized Sun SVG used by the Solstice hero.
+ * Uses the same palette from the images and provides a subtle glossy highlight.
+ */
+export default function SunIcon({
+  size = 560,
+  className = "",
+  ariaLabel = "Solstice sun",
+}: {
+  size?: number;
+  className?: string;
+  ariaLabel?: string;
+}) {
+  const id = "solsticeGradient";
+  return (
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 600 600"
+      role="img"
+      aria-label={ariaLabel}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <radialGradient id={id} cx="35%" cy="25%" r="80%">
+          <stop offset="0%" stopColor="#FFEB3B" />
+          <stop offset="35%" stopColor="#FFD700" />
+          <stop offset="65%" stopColor="#FFA500" />
+          <stop offset="100%" stopColor="#FF8C00" />
+        </radialGradient>
+
+        {/* subtle texture to give a tactile finish */}
+        <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence baseFrequency="0.8" numOctaves="2" stitchTiles="stitch" result="t" />
+          <feColorMatrix type="saturate" values="0" />
+          <feBlend in="SourceGraphic" in2="t" mode="overlay" />
+        </filter>
+      </defs>
+
+      {/* large circular sun */}
+      <g filter="url(#grain)">
+        <circle cx="300" cy="300" r="280" fill={`url(#${id})`} />
+      </g>
+
+      {/* thin inner glow to add depth */}
+      <circle cx="300" cy="300" r="235" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="80" />
+
+      {/* highlight gloss */}
+      <ellipse cx="220" cy="180" rx="140" ry="90" fill="rgba(255,255,255,0.12)" />
+    </svg>
+  );
+}
+
+
+import React from "react";
+import SunIcon from "./ui/SunIcon";
+
+/**
+ * SolsticeHero
+ * A responsive hero section with the warm gradient background, sun, and a clean content card.
+ * Drop this into your root layout (e.g., app/layout.tsx) or the homepage.
+ */
+export default function SolsticeHero() {
+  return (
+    <header className="relative solstice-bg flex items-center justify-center px-6 py-24">
+      {/* positioned sun (visual only) */}
+      <div
+        aria-hidden
+        className="absolute pointer-events-none flex items-center justify-center"
+        style={{ inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        <div className="solstice-sun" style={{ width: 560, height: 560, maxWidth: "70vw", maxHeight: "70vw" }}>
+          <SunIcon />
+        </div>
+      </div>
+
+      {/* Content card sits above the sun */}
+      <div className="relative z-10 max-w-3xl w-full">
+        <div className="solstice-card mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl solstice-title">
+            Solstice
+          </h1>
+          <p className="mt-3 text-base md:text-lg solstice-sub">
+            Warmth and efficiency. Clean, inviting solar-first assistant for renewable energy workflows.
+          </p>
+
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              className="inline-flex items-center justify-center rounded-md bg-white/90 text-[#111827] px-5 py-2 text-sm font-medium shadow-sm hover:scale-[1.01] transition-transform"
+              href="#"
+            >
+              Get started
+            </a>
+            <a
+              className="inline-flex items-center justify-center rounded-md border border-white/70 text-white/95 px-5 py-2 text-sm font-medium hover:opacity-90 transition"
+              href="#features"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* small decorative star (bottom-right) — optional */}
+      <svg aria-hidden className="absolute right-8 bottom-12 solstice-star" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2.5l1.2 3.2L16.7 7l-3.5 1.3L12 12l-1.2-3.7L7.3 7l3.5-1.2L12 2.5z" fill="white" />
+      </svg>
+    </header>
+  );
 }
