@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Field, FieldLabel, FieldGroup } from "@/components/ui/field";
 import { MessageWall } from "@/components/messages/message-wall";
+import { SolarMascot } from "@/components/solar-mascot";
 import { AI_NAME, WELCOME_MESSAGE, CLEAR_CHAT_TEXT } from "@/config";
 import { toast } from "sonner";
 
@@ -216,27 +217,36 @@ export function ChatLauncher() {
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto px-4 py-4 relative z-10">
-            {messages.length === 0 || (messages.length === 1 && messages[0].role === "assistant") ? (
-              <div className="flex flex-col gap-4">
-                <MessageWall messages={messages} status={status} durations={durations} onDurationChange={handleDurationChange} />
-                <div className="grid grid-cols-2 gap-2 mt-4">
-                  {quickStartOptions.map((option) => (
-                    <button
-                      key={option.label}
-                      onClick={() => handleQuickStart(option.message)}
-                      className="flex items-center gap-2 p-3 rounded-xl border border-orange-200 hover:bg-orange-50 transition-colors text-left"
-                      style={{ backgroundColor: "#FFFBF0" }}
-                    >
-                      <option.icon className="h-5 w-5 flex-shrink-0" style={{ color: "#FF9800" }} />
-                      <span className="text-sm font-medium text-gray-700">{option.label}</span>
-                    </button>
-                  ))}
-                </div>
+          <div className="flex-1 overflow-y-auto relative z-10">
+            <div className="flex h-full">
+              <div className="flex-1 px-4 py-4 overflow-y-auto">
+                {messages.length === 0 || (messages.length === 1 && messages[0].role === "assistant") ? (
+                  <div className="flex flex-col gap-4">
+                    <MessageWall messages={messages} status={status} durations={durations} onDurationChange={handleDurationChange} />
+                    <div className="grid grid-cols-2 gap-2 mt-4">
+                      {quickStartOptions.map((option) => (
+                        <button
+                          key={option.label}
+                          onClick={() => handleQuickStart(option.message)}
+                          className="flex items-center gap-2 p-3 rounded-xl border border-orange-200 hover:bg-orange-50 transition-colors text-left"
+                          style={{ backgroundColor: "#FFFBF0" }}
+                        >
+                          <option.icon className="h-5 w-5 flex-shrink-0" style={{ color: "#FF9800" }} />
+                          <span className="text-sm font-medium text-gray-700">{option.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <MessageWall messages={messages} status={status} durations={durations} onDurationChange={handleDurationChange} />
+                )}
               </div>
-            ) : (
-              <MessageWall messages={messages} status={status} durations={durations} onDurationChange={handleDurationChange} />
-            )}
+              {isFullScreen && (
+                <div className="hidden md:flex w-32 items-center justify-center border-l border-orange-100" style={{ backgroundColor: "#FFFBF0" }}>
+                  <SolarMascot />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="p-4 border-t border-orange-100 relative z-10" style={{ backgroundColor: "#FFF3E0" }}>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Sun, Zap, RotateCcw, Home, ArrowRight, Battery, Plug, Leaf, DollarSign, Flame, Droplets, Wind, CheckCircle } from "lucide-react";
+import { TryDemoButton } from "@/components/try-demo-button";
 
 export default function SolarBasicsPage() {
   return (
@@ -319,12 +320,14 @@ export default function SolarBasicsPage() {
               Our AI-powered assistant can help you understand how much you could save with solar, 
               including subsidies and net metering benefits specific to your location.
             </p>
-            <Link href="/app/chat/demo">
-              <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100">
-                Try Free Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            <TryDemoButton 
+              size="lg" 
+              className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold !from-white !to-white" 
+              showIcon={false}
+            >
+              Try Free Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </TryDemoButton>
           </div>
         </div>
       </main>
