@@ -78,7 +78,16 @@ Solstice is an AI-powered solar energy analysis platform built with Next.js 16. 
 - `app/auth/login/page.tsx` - Authentication
 
 ## Recent Changes (November 27, 2025)
-- Implemented V2.1 SaaS platform architecture
+
+### V2.2 - Chat UI Branding Update
+- Updated logo across all pages with new Solstice logo (sun with solar panels)
+- Redesigned chat demo with warm solar-themed background (#FFF8E1)
+- Added subtle faded solar panel pattern in chat background
+- Updated welcome message: "Hello! I'm SOLSTICE, an AI assistant helping you to understand the landscape of solar installation."
+- Applied vibrant orange/amber color scheme (#FF9800, #FFC107) to chat UI
+- Updated footer: "© 2025 Solstice Terms of Use Powered by Solstice AI"
+
+### V2.1 - SaaS Platform Architecture
 - Created multi-page marketing website
 - Moved chat from `/` to `/app/chat/demo`
 - Added landing page with hero, value props, testimonials
@@ -86,7 +95,6 @@ Solstice is an AI-powered solar energy analysis platform built with Next.js 16. 
 - Added Team page with founder profiles
 - Built Solar Basics educational page with SLD diagram
 - Implemented Contact and Login pages
-- Updated branding with Solstice logo and solar gradient theme
 
 ## User Preferences
 - Prefer asking clarifying questions before providing detailed information
