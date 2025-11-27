@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MyAI3",
-  description: "MyAI3",
+  title: "Solstice - Your Peak Solar Performance Begins Here",
+  description: "AI-powered solar analysis platform. Unlock maximum savings with regulatory-backed insights on MSEDCL tariffs, MNRE subsidies, and net metering.",
+  keywords: ["solar", "solar panels", "net metering", "MSEDCL", "MNRE", "solar calculator", "solar ROI"],
 };
 
 export default function RootLayout({
@@ -28,6 +30,7 @@ export default function RootLayout({
         className={`${inter.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

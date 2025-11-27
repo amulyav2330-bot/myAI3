@@ -1,0 +1,90 @@
+## 🚀 Senior Lead Engineer Prompt: Solstice SaaS Platform Refactoring (V2.1 - Production Build)
+
+**To:** Senior Lead Engineer
+**From:** Product Manager
+**Project:** Refactoring **Simple Chat App** to **Solstice SaaS Platform**
+**Deployment Environment:** Replit (Connected to GitHub/Vercel)
+**Current Status:** Agent logic (RAG/Pinecone/Vercel) is stable. Frontend is a basic, direct-to-chat interface.
+
+**Objective:** Implement the final, multi-page, responsive SaaS marketing platform, **"Solstice"**, integrating all enhanced features, custom content, and adhering to strict compliance and documentation protocols.
+
+-----
+
+### **I. Architectural & Compliance Protocol (Mandatory)**
+
+1.  **Routing Overhaul:**
+      * Set the root route (`/`) to load the new **Marketing Landing Page**.
+      * Move the current chat application to the protected route: `/app/chat/demo`.
+      * Establish dedicated routes for: `/plans`, `/auth/login`, `/contact`, `/team`, `/info/solar-basics`.
+2.  **Database Integrity (CRITICAL):**
+      * **Do not modify** any existing backend code connecting to **Pinecone (Vector DB)** or the Vercel deployment structure. The RAG functionality must remain operational and accessible via the `/app/chat/demo` route.
+3.  **Styling & Branding:**
+      * **Primary Accent Color:** Use the hex code **`#3498DB`** (a bright, reliable blue) for all primary buttons, CTAs, and header elements.
+      * **Logo:** Integrate the uploaded logo image  prominently in the header.
+4.  **Responsiveness:**
+      * All new and refactored components must be built using a **fully responsive design framework** (e.g., modern CSS grid/flexbox, Tailwind CSS, etc.) to ensure a seamless experience on all mobile, tablet, and desktop devices.
+
+-----
+
+### **II. Page Structure & Component Implementation**
+
+#### **A. Marketing Landing Page (New Root Route: `/`)**
+
+| Section | Required Copy & Logic | Technical Implementation Details |
+| :--- | :--- | :--- |
+| **Header** | **Title:** Solstice (The sun's highest or lowest point). | Integrate the logo and apply the primary accent color to the navigation background or underline. |
+| **Hero Section** | **Headline:** "Solstice: Your Peak Solar Performance Begins Here." **Subhead:** "Unlock maximum savings and power your future with regulatory-backed AI analysis." | High-impact, full-width component. |
+| **Value Proposition** | **What We Do:** "We unify MSEDCL tariffs, MNRE subsidies, and VNM regulations into a single, personalized financial report." **Who We Cater To:** "Citizens and residents exploring solar panel installation options and aiming for energy independence." **USP:** "Guaranteed Compliance. Real-time ROI. **A Better Tomorrow, Starting Today.**" | Structured three-column responsive section below the hero. |
+| **CTAs (Action Gates)**| **Button 1:** "Sign In / Sign Up" (Routes to `/auth/login`). **Button 2:** "View Plans" (Routes to `/plans`). **Button 3 (Demo):** "Try Free Demo" (Routes to `/app/chat/demo`). | All buttons must use the `#3498DB` primary color. |
+| **Testimonials** | Display three distinct testimonial blocks (dummy data): **1. Financial Savings, 2. Environmental Impact, 3. Education/Knowledge.** (Use provided quotes). | Implement as a responsive grid layout or carousel at the bottom of the page. |
+| **Footer** | Contact Email: `contact@solstice.com`. Links to: `/contact`, `/team`, `/plans`, `/info/solar-basics`. | Standard footer component. |
+
+#### **B. Supporting Pages**
+
+1.  **Pricing/Plans Page (`/plans`)**
+
+      * Structure two tiers: **"Solstice Free"** (Limited Demo functionality) and **"Solstice Pro"** (Paid Plan).
+      * **"Solstice Pro" Feature List:** Detail features like "Unlimited ROI Reports," "Full Compliance Auditing," and "Presentation Export."
+      * **CTA:** Button labeled "Upgrade to Solstice Pro" (Routes to a dummy checkout/billing page).
+
+2.  **Meet the Team Page (`/team`)**
+
+      * Display two founders: **Dr. Amulya Guduri** and **Kruthika Kanduri**.
+      * **Dr. Amulya Guduri (CEO, AI & Compliance Strategist):** Bio must focus on AI, financial modeling, and public policy. Include a dedicated avatar/placeholder image and a dummy LinkedIn URL.
+      * **Kruthika Kanduri (CTO, Engineering Lead):** Bio must focus on platform development, data architecture, and solar technology. Include a dedicated avatar/placeholder image and a dummy LinkedIn URL.
+
+3.  **Solar Basics Page (`/info/solar-basics`)**
+
+      * Content must define key concepts: **kW (Capacity)**, **Net Metering**, **Inverter Function**.
+      * **Visual Integration:** Embed the **Single-Line Diagram (SLD)** graphic
+
+[Image of Single Line Diagram for Grid-Tied Solar System]
+to illustrate the system flow (Sunlight $\to$ DC $\to$ Inverter $\to$ AC $\to$ Home/Grid).
+
+4.  **Contact Us Page (`/contact`)**
+      * Standard form and display of the business contact email (`contact@solstice.com`).
+
+#### **C. Application Interface Enhancement (`/app/chat/demo`)**
+
+| Feature | Requirement | Implementation Logic & Protocol |
+| :--- | :--- | :--- |
+| **Web Search Integration (CRITICAL)** | When the AI mentions an external entity, automatically trigger a web search and resolve the link. | **Protocol:** In the backend function responsible for processing the AI's final output, implement logic that checks for known external keywords (e.g., MSEDCL, SBI, partner name). **Logic:** If keyword is found, execute `web_search(keyword + " official website")` and append the **direct, clickable URL link** to the chat output. |
+
+### **III. Final Commit & Documentation Instructions**
+
+1.  Confirm all new routes, responsive styling, and component integrations are functional.
+2.  Commit all changes to your connected GitHub repository.
+
+**Documentation Protocol (CRITICAL):**
+Update the **`CHANGELOG.md`** file with the following detailed entry before the final commit.
+
+```markdown
+Date: 27.11.2025
+- **Architecture:** Implemented V2.1 SaaS platform architecture and multi-page routing.
+- **Routing:** Moved chat from `/` to `/app/chat/demo`. Added routes: `/plans`, `/auth/login`, `/contact`, `/team`, `/info/solar-basics`.
+- **Branding:** Integrated logo and set primary accent color to `#3498DB` across the platform.
+- **Landing Page (Feature):** Implemented new Hero copy, Value Proposition, and testimonial section (Financial, Environmental, Knowledge).
+- **Team Page:** Added specific founder details (Dr. Guduri, Kruthika Kanduri) with defined roles (AI/Compliance and Engineering).
+- **Solar Basics:** Integrated the **Single-Line Diagram (SLD)** image and concept definitions.
+- **Functionality (CRITICAL):** Implemented **Web Search Integration** logic in the chat output to automatically resolve and link external partners/portals, enhancing agent credibility.
+```

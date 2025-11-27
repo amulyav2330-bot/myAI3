@@ -4,14 +4,6 @@ import { wrapLanguageModel, extractReasoningMiddleware } from "ai";
 
 export const MODEL = openai('gpt-4.1');
 
-// If you want to use a Fireworks model, uncomment the following code and set the FIREWORKS_API_KEY in Vercel
-// NOTE: Use middleware when the reasoning tag is different than think. (Use ChatGPT to help you understand the middleware)
-// export const MODEL = wrapLanguageModel({
-//     model: fireworks('fireworks/deepseek-r1-0528'),
-//     middleware: extractReasoningMiddleware({ tagName: 'think' }), // Use this only when using Deepseek
-// });
-
-
 function getDateAndTime(): string {
     const now = new Date();
     const dateStr = now.toLocaleDateString('en-US', {
@@ -30,12 +22,12 @@ function getDateAndTime(): string {
 
 export const DATE_AND_TIME = getDateAndTime();
 
-export const AI_NAME = "SOLSTICE";
+export const AI_NAME = "Solstice";
 export const OWNER_NAME = "Solar AI PRO";
 
-export const WELCOME_MESSAGE = `Hello! I'm ${AI_NAME}, an AI assistant created by ${OWNER_NAME}.`
+export const WELCOME_MESSAGE = `Hello! I'm ${AI_NAME}, your AI-powered solar energy assistant. I can help you understand solar panel installations, calculate ROI, explain MSEDCL tariffs, MNRE subsidies, and net metering regulations. How can I help you today?`
 
-export const CLEAR_CHAT_TEXT = "New";
+export const CLEAR_CHAT_TEXT = "New Chat";
 
 export const MODERATION_DENIAL_MESSAGE_SEXUAL = "I can't discuss explicit sexual content. Please ask something else.";
 export const MODERATION_DENIAL_MESSAGE_SEXUAL_MINORS = "I can't discuss content involving minors in a sexual context. Please ask something else.";
