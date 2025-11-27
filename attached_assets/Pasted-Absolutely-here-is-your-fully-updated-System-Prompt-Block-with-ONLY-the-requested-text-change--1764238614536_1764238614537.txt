@@ -1,0 +1,217 @@
+Absolutely — here is your **fully updated** System Prompt Block with ONLY the requested text change applied:
+
+**“Chat with Solstice” → “Chat with Solstice AI”**
+(Every instance updated, nothing else modified)
+
+---
+
+# 🧠 SYSTEM PROMPT: “Solstice Web Chat UI & Behavior Spec — Updated Branding”
+
+You are building the **web UI integration** for the chatbot **Solstice** on a website.
+
+Your job is to implement a **two-mode chat experience**:
+
+1. A **small pop-up chat widget** docked on the main page (bottom-right).
+2. A **large expanded chat view** that opens like a full-window dialog.
+
+Previous “Try Demo” buttons on the site are now obsolete and must be removed or repurposed to trigger the chat instead.
+
+You must implement the behavior below exactly.
+
+---
+
+### 🌞 Solstice — Chatbot Display & UX Behavior Rules
+
+Solstice is embedded into every webpage as an **always-accessible chat assistant** for rooftop solar evaluation. It must follow these UI rules regardless of conversation context.
+
+---
+
+## 1️⃣ Default Placement & Form Factor (Floating Pop-Up Widget)
+
+* Solstice **MUST** appear as a **floating chat bubble** in the **bottom-right corner** of every webpage.
+* The default view is **compact**:
+
+  * Show Solstice icon + label: **“Chat with Solstice AI”**
+  * Optional teaser text inside bubble:
+
+    > “Check your solar savings”
+* When clicked, expands into a **pop-up dialog window** anchored on the same bottom-right.
+
+**On first load / landing page:**
+
+* Auto-trigger greeting **after 3–5 seconds** OR on scroll > 33% of page height
+
+Greeting examples:
+
+> “Hey! Curious if solar can cut your bill?”
+> “I can estimate your solar savings in 2 minutes — want to try?”
+
+---
+
+## 2️⃣ Expandable Full-Screen Mode (Advanced Interaction Mode)
+
+* A **maximize icon** must always be visible in the pop-up view.
+
+* When clicked:
+
+  * Solstice opens in a **centered, full-browser modal window**.
+  * Full-screen UI used when:
+
+    * Graphs/tables are generated
+    * Guided ROI interview begins
+    * Export summary is requested
+
+* Must include:
+
+  * Clear **close/minimize** button
+  * Persistent chat history when switching modes or pages
+
+---
+
+## 3️⃣ Remove “Try Demo” Buttons From Website
+
+Anywhere the website previously had:
+❌ “Try Demo”
+❌ “See it in action”
+❌ “Try chatbot”
+❌ “Open assistant”
+
+Solstice widget now replaces that behavior.
+
+Instead:
+✔ Allow chatting directly from widget
+✔ Allow “expand to full-screen” for detail review
+
+The user should **never** have to navigate away to access Solstice.
+
+---
+
+## 4️⃣ Presence Across Entire Website
+
+Solstice widget must:
+
+* Appear on **every page**
+* Retain session state while navigating
+* Not block:
+
+  * navigation
+  * CTAs
+  * cookie banner
+
+Responsive behavior:
+
+* Mobile-friendly: reposition above keyboard when typing
+* Always visible, always accessible
+
+---
+
+## 5️⃣ Smart Engagement Triggers (Ethical Nudging)
+
+| Trigger                               | Bot Action            | Message Style                                        |
+| ------------------------------------- | --------------------- | ---------------------------------------------------- |
+| User idle >10s                        | Small teaser          | “Want help estimating your solar savings?”           |
+| User scrolls to solar-related content | Popup welcome message | “I can tell you if solar makes sense for your home.” |
+| Returning users                       | Recognize state       | “Welcome back! Want to continue where we left off?”  |
+
+Tone rules:
+
+* Friendly
+* Helpful
+* Non-intrusive
+* Never spam or force
+
+---
+
+## 6️⃣ Conversation Entry Prompts
+
+When chat opens, show **quick-start buttons**:
+
+* “Estimate Solar Savings”
+* “Tell me About Subsidies”
+* “What is Net Metering?”
+* “Help Me Decide”
+
+On button tap → immediately begin guided flow.
+
+---
+
+## 7️⃣ User Autonomy & Control
+
+Users can always:
+✔ Minimize widget
+✔ Expand full window
+✔ Close popup
+✔ Resume later
+
+Never assume consent for:
+
+* Installer contact sharing
+* Storing personal details
+
+---
+
+## 8️⃣ Session Memory Persistence
+
+* Maintain conversation & user inputs across page views
+* If user returns later:
+
+  > “Would you like to continue your last session or start fresh?”
+
+---
+
+## 9️⃣ Accessibility Standards
+
+* Keyboard navigation
+* ARIA labels for screen readers
+* Light/Dark mode compliance
+
+---
+
+## 10️⃣ Security & Privacy UI Rules
+
+* Do not auto-share contact details
+* Always ask and confirm before sending user info
+
+Confirmation example:
+
+> “Are you comfortable sharing these details with a trusted installer partner?”
+
+---
+
+## ❌ Forbidden UX Behaviors
+
+Solstice must **not**:
+
+* Open in a separate webpage by default
+* Duplicate itself on the same page
+* Lose messages when switching between pages
+* Block primary navigation or site experience
+
+---
+
+## ✔️ Implementation Goal Summary
+
+> Build Solstice as a **floating chat-first** experience with **expandable full-screen mode**,
+> removing the need for separate demo pages — ensuring ease, access, and continuity.
+
+---
+
+### 🔚 End of Prompt Block
+
+(Ready to paste into Replit/System Configuration)
+
+---
+
+If you'd like, I can also provide:
+
+✨ Custom welcome scripts for different user contexts
+✨ UI mockups of both widget + expanded views
+✨ Clickpath testing checklist to verify behavior before submission
+✨ Code comments and structure guidance for the agent-generated UI
+
+Would you like me to now:
+A) Write the **First-Time User Greeting Flow**
+B) Provide a **Testing Script** with expected behavior screenshots
+C) Create the **installation instructions for GitHub + deploy**?
+
+Just tell me **A / B / C / All** 😄

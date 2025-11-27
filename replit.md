@@ -79,6 +79,30 @@ Solstice is an AI-powered solar energy analysis platform built with Next.js 16. 
 
 ## Recent Changes (November 27, 2025)
 
+### V3.0 - Floating Chat Widget & PDF Report Generation
+- Added floating chat widget (ChatLauncher) on all pages:
+  - Bottom-right floating "Chat with Solstice AI" button
+  - Expandable pop-up with minimize/maximize/close buttons
+  - Full-screen mode for detailed interactions
+  - Quick-start buttons: Estimate Savings, Subsidies, Net Metering, Get Report
+  - Auto-greeting after 4 seconds for new visitors
+  - Session persistence across page navigation
+- Added comprehensive safety guardrails to chatbot:
+  - Hallucination control (RAG enforcement)
+  - AI identity disclosure
+  - Out-of-scope topic blocking
+  - PII protection (no Aadhaar, bank details)
+  - Competitor neutrality
+  - Timeline disclaimers
+  - No ROI guarantees
+  - Physical safety protocols (emergency detection, no DIY electrical advice)
+- Added PDF report generation API (/api/reports):
+  - Professional solar analysis reports with branding
+  - System sizing, cost breakdown, subsidy calculations
+  - Financial projections with payback period
+  - Environmental impact (CO2 offset)
+  - Downloadable PDF format
+
 ### V2.9 - Enhanced AI Guardrails & Solar Basics Content
 - Updated Kruthika Kanduri's team photo with new uploaded image
 - Added comprehensive ethical sales nudges to AI chatbot:
