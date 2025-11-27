@@ -65,7 +65,7 @@ export default function TeamPage() {
               </p>
               <div className="flex justify-center">
                 <a 
-                  href="https://linkedin.com/in/amulya-guduri" 
+                  href="https://www.linkedin.com/in/amulyaguduri23/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-[#3498DB] hover:text-[#2980B9] transition-colors"
@@ -98,7 +98,7 @@ export default function TeamPage() {
               </p>
               <div className="flex justify-center">
                 <a 
-                  href="https://linkedin.com/in/kruthika-kanduri" 
+                  href="https://www.linkedin.com/in/kruthika-kanduri-b59826160/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-[#3498DB] hover:text-[#2980B9] transition-colors"

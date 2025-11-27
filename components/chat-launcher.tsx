@@ -6,7 +6,7 @@ import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import { MessageCircle, X, Maximize2, Minimize2, ArrowUp, Square, Plus, Sun, FileText, HelpCircle, Calculator, Download } from "lucide-react";
+import { MessageCircle, X, Maximize2, Minimize2, ArrowUp, Square, Plus, Sun, FileText, HelpCircle, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Field, FieldLabel, FieldGroup } from "@/components/ui/field";
@@ -54,7 +54,7 @@ const quickStartOptions = [
   { label: "Estimate Solar Savings", icon: Calculator, message: "I want to estimate my solar savings. Can you help me calculate based on my electricity bill?" },
   { label: "Tell me About Subsidies", icon: Sun, message: "What subsidies are available for rooftop solar in Maharashtra?" },
   { label: "What is Net Metering?", icon: HelpCircle, message: "Can you explain how net metering works?" },
-  { label: "Get Analysis Report", icon: Download, message: "I want to download a complete solar analysis report for my home. My monthly bill is around Rs. 3000 and I'm located in Pune, Maharashtra." },
+  { label: "Solar Simplified", icon: FileText, message: "I want to learn about solar energy basics. What is solar energy and why is rooftop solar useful?" },
 ];
 
 export function ChatLauncher() {

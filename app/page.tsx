@@ -107,19 +107,7 @@ export default function LandingPage() {
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="flex justify-center mb-8">
-                <div className="relative">
-                  <div className="w-32 h-32 rounded-full solar-gradient-radial opacity-20 absolute -inset-4 blur-2xl"></div>
-                  <Image
-                    src="/solstice-logo.png"
-                    alt="Solstice"
-                    width={120}
-                    height={120}
-                    className="relative z-10"
-                  />
-                </div>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-10">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-10 mt-8">
                 Solstice: Your Peak Solar
                 <span className="block bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 bg-clip-text text-transparent">
                   Performance Begins Here
