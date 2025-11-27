@@ -4,6 +4,7 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
+packages = ["libheif", "imagemagick"]
 
 [workflows]
 runButton = "Project"
@@ -34,8 +35,8 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 34529
-externalPort = 3002
+localPort = 37135
+externalPort = 3001
 
 [[ports]]
 localPort = 37361
