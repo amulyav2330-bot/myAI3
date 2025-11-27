@@ -268,12 +268,12 @@ export default function LandingPage() {
           </div>
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Solstice. All rights reserved.
+              © 2025 Solstice. All rights reserved.
             </p>
             <div className="flex gap-6 text-gray-400 text-sm">
               <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
               <span>|</span>
-              <span>Powered by Solar AI PRO</span>
+              <span className="text-amber-400">Powered by Solstice AI</span>
             </div>
           </div>
         </div>
