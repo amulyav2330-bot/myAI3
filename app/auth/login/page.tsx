@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft, Mail, Lock, Sun } from "lucide-react";
 import { useState } from "react";
+import { TryDemoButton } from "@/components/try-demo-button";
 
 export default function LoginPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -151,11 +152,13 @@ export default function LoginPage() {
 
             <div className="mt-6 pt-6 border-t border-gray-200">
               <p className="text-sm text-gray-500 text-center mb-4">Or try without signing in</p>
-              <Link href="/app/chat/demo">
-                <Button variant="outline" className="w-full border-orange-300 text-orange-600 hover:bg-orange-50">
-                  Try Free Demo
-                </Button>
-              </Link>
+              <TryDemoButton 
+                size="default" 
+                className="w-full border-orange-300 text-orange-600 hover:bg-orange-50 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white"
+                showIcon={false}
+              >
+                Try Free Demo
+              </TryDemoButton>
             </div>
           </div>
 

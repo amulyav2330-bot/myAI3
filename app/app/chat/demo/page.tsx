@@ -125,12 +125,16 @@ export default function Chat() {
   }
 
   function clearChat() {
-    const newMessages: UIMessage[] = [];
-    const newDurations = {};
-    setMessages(newMessages);
-    setDurations(newDurations);
-    saveMessagesToStorage(newMessages, newDurations);
-    toast.success("Chat cleared");
+    const welcomeMessage: UIMessage = {
+      id: `welcome-${Date.now()}`,
+      role: "assistant",
+      parts: [{ type: "text", text: WELCOME_MESSAGE }],
+    };
+    setMessages([welcomeMessage]);
+    setDurations({});
+    saveMessagesToStorage([welcomeMessage], {});
+    welcomeMessageShownRef.current = true;
+    toast.success("New chat started");
   }
 
   return (

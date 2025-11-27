@@ -5,8 +5,8 @@ import { ToolCall, ToolResult } from "./tool-call";
 
 export function AssistantMessage({ message, status, isLastMessage, durations, onDurationChange }: { message: UIMessage; status?: string; isLastMessage?: boolean; durations?: Record<string, number>; onDurationChange?: (key: string, duration: number) => void }) {
     return (
-        <div className="w-full">
-            <div className="text-sm flex flex-col gap-4">
+        <div className="w-full max-w-2xl mx-auto text-center">
+            <div className="text-sm flex flex-col gap-4 items-center">
                 {message.parts.map((part, i) => {
                     const isStreaming = status === "streaming" && isLastMessage && i === message.parts.length - 1;
                     const durationKey = `${message.id}-${i}`;

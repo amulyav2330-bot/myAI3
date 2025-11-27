@@ -140,11 +140,16 @@ export function ChatLauncher() {
   }
 
   function clearChat() {
-    setMessages([]);
+    const welcomeMessage: UIMessage = {
+      id: `welcome-${Date.now()}`,
+      role: "assistant",
+      parts: [{ type: "text", text: WELCOME_MESSAGE }],
+    };
+    setMessages([welcomeMessage]);
     setDurations({});
-    saveMessagesToStorage([], {});
-    welcomeMessageShownRef.current = false;
-    toast.success("Chat cleared");
+    saveMessagesToStorage([welcomeMessage], {});
+    welcomeMessageShownRef.current = true;
+    toast.success("New chat started");
   }
 
   if (!isClient) return null;
@@ -167,8 +172,15 @@ export function ChatLauncher() {
       )}
 
       {isOpen && (
-        <div className={`${widgetSize} flex flex-col rounded-2xl shadow-2xl overflow-hidden border border-orange-200`} style={{ backgroundColor: "#FFF8E1" }}>
-          <div className="flex items-center justify-between px-4 py-3 border-b border-orange-100" style={{ backgroundColor: "#FFF3E0" }}>
+        <div className={`${widgetSize} flex flex-col rounded-2xl shadow-2xl overflow-hidden border border-orange-200 relative`} style={{ backgroundColor: "#FFF8E1" }}>
+          <div 
+            className="absolute inset-0 opacity-[0.05] pointer-events-none rounded-2xl"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect fill='%23FF9800' x='10' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='27' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='44' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='10' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='27' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='44' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='65' y='40' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='82' y='40' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='65' y='52' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='82' y='52' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='20' y='70' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='37' y='70' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='20' y='82' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='37' y='82' width='15' height='10' rx='1'/%3E%3C/svg%3E")`,
+              backgroundSize: '200px 200px',
+            }}
+          />
+          <div className="flex items-center justify-between px-4 py-3 border-b border-orange-100 relative z-10" style={{ backgroundColor: "#FFF3E0" }}>
             <div className="flex items-center gap-2">
               <Image
                 src="/solstice-logo.png"
@@ -204,7 +216,7 @@ export function ChatLauncher() {
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto px-4 py-4">
+          <div className="flex-1 overflow-y-auto px-4 py-4 relative z-10">
             {messages.length === 0 || (messages.length === 1 && messages[0].role === "assistant") ? (
               <div className="flex flex-col gap-4">
                 <MessageWall messages={messages} status={status} durations={durations} onDurationChange={handleDurationChange} />
@@ -227,7 +239,7 @@ export function ChatLauncher() {
             )}
           </div>
 
-          <div className="p-4 border-t border-orange-100" style={{ backgroundColor: "#FFF3E0" }}>
+          <div className="p-4 border-t border-orange-100 relative z-10" style={{ backgroundColor: "#FFF3E0" }}>
             <div className="flex items-center gap-2 mb-2">
               <Button
                 variant="ghost"

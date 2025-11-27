@@ -16,12 +16,12 @@ export function MessageWall({ messages, status, durations, onDurationChange }: {
     }, [messages]);
 
     return (
-        <div className="relative max-w-3xl w-full">
-            <div className="relative flex flex-col gap-4">
+        <div className="relative max-w-3xl w-full mx-auto">
+            <div className="relative flex flex-col gap-4 items-center">
                 {messages.map((message, messageIndex) => {
                     const isLastMessage = messageIndex === messages.length - 1;
                     return (
-                        <div key={message.id} className="w-full">
+                        <div key={message.id} className="w-full flex justify-center">
                             {message.role === "user" ? <UserMessage message={message} /> : <AssistantMessage message={message} status={status} isLastMessage={isLastMessage} durations={durations} onDurationChange={onDurationChange} />}
                         </div>
                     );

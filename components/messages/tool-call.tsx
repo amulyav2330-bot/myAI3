@@ -1,6 +1,7 @@
 import { ToolCallPart, ToolResultPart } from "ai";
-import { Book, Globe, Search, Presentation, Wrench } from "lucide-react";
+import { Book, Globe, Search, Presentation, Wrench, BarChart3 } from "lucide-react";
 import { Shimmer } from "../ai-elements/shimmer";
+import { ChartRenderer } from "../chart-renderer";
 
 export interface ToolDisplay {
     call_label: string;
@@ -29,6 +30,12 @@ const TOOL_DISPLAY_MAP: Record<string, ToolDisplay> = {
         result_label: "Searched the web",
         result_icon: <Search className="w-4 h-4" />,
         formatArgs: formatWebSearchArgs,
+    },
+    generateChart: {
+        call_label: "Creating chart",
+        call_icon: <BarChart3 className="w-4 h-4" style={{ color: '#FF9800' }} />,
+        result_label: "",
+        result_icon: <BarChart3 className="w-4 h-4" style={{ color: '#FF9800' }} />,
     },
 };
 
@@ -96,6 +103,13 @@ export function ToolResult({ part }: { part: ToolResultPart }) {
 
     const input = 'input' in part ? part.input : undefined;
     const formattedArgs = input !== undefined ? formatToolArguments(toolName || "", input, toolDisplay) : "";
+
+    if (toolName === "generateChart" && output && typeof output === "object") {
+        const chartOutput = output as { type?: string; config?: any };
+        if (chartOutput.type === "chart" && chartOutput.config) {
+            return <ChartRenderer config={chartOutput.config} />;
+        }
+    }
 
     return (
         <div className="flex items-center gap-2">
