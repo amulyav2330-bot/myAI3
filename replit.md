@@ -79,6 +79,20 @@ Solstice is an AI-powered solar energy analysis platform built with Next.js 16. 
 
 ## Recent Changes (November 27, 2025)
 
+### V2.9 - Enhanced AI Guardrails & Solar Basics Content
+- Updated Kruthika Kanduri's team photo with new uploaded image
+- Added comprehensive ethical sales nudges to AI chatbot:
+  - Payback-based messaging (≤6 years, 6-9 years, >9 years scenarios)
+  - User empowerment phrases reinforcing decision autonomy
+  - Prohibited behaviors (no pressure tactics, guilt-tripping, fake urgency)
+- Added geographic scope guardrails to chatbot:
+  - Maharashtra users: Full precision with local tariffs, net metering, subsidies
+  - Other Indian states: Web-validated data with disclaimers
+  - International users: High-level education only, no financial claims
+- Enhanced Solar Basics page with "Why Solar Energy?" comparison section:
+  - Solar vs Coal/Fossil Fuels vs Wind vs Hydropower comparison cards
+  - Highlights solar's unique accessibility for homeowners
+
 ### V2.8 - Production Build with Full T&C Integration
 - Added real team photos (Dr. Amulya Guduri, Kruthika Kanduri)
 - Updated pricing to ₹999/month for Indian market
