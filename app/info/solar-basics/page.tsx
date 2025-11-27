@@ -5,7 +5,14 @@ import { ArrowLeft, Sun, Zap, RotateCcw, Home, ArrowRight, Battery, Plug } from 
 
 export default function SolarBasicsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative">
+      <div 
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect fill='%23FF9800' x='10' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='27' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='44' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='10' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='27' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='44' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='65' y='40' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='82' y='40' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='65' y='52' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='82' y='52' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='20' y='70' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='37' y='70' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='20' y='82' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='37' y='82' width='15' height='10' rx='1'/%3E%3C/svg%3E")`,
+          backgroundSize: '200px 200px',
+        }}
+      />
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-orange-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">

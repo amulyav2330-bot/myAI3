@@ -54,7 +54,14 @@ const faqs = [
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative">
+      <div 
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect fill='%23FF9800' x='10' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='27' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='44' y='10' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='10' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='27' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='44' y='22' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='65' y='40' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='82' y='40' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='65' y='52' width='15' height='10' rx='1'/%3E%3Crect fill='%23FFC107' x='82' y='52' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='20' y='70' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='37' y='70' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='20' y='82' width='15' height='10' rx='1'/%3E%3Crect fill='%23FF9800' x='37' y='82' width='15' height='10' rx='1'/%3E%3C/svg%3E")`,
+          backgroundSize: '200px 200px',
+        }}
+      />
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-orange-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -116,15 +123,12 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-10">
                 Solstice: Your Peak Solar
                 <span className="block bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 bg-clip-text text-transparent">
                   Performance Begins Here
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-                We demystify solar—from tariff slabs to subsidies—with AI-driven clarity. Get the precise budget, roadmap, and knowledge you need to start generating your own power today.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/auth/login">
                   <Button size="lg" className="bg-[#3498DB] hover:bg-[#2980B9] text-white px-8 py-6 text-lg">
@@ -178,7 +182,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Our USP</h3>
                 <p className="text-gray-600">
-                  Guaranteed Compliance. Real-time ROI. <strong>A Better Tomorrow, Starting Today.</strong>
+                  We demystify solar - from tariff slabs to subsidies - with AI-driven clarity. Get the precise budget, roadmap, and knowledge you need to start generating your own power today.
                 </p>
               </div>
             </div>
