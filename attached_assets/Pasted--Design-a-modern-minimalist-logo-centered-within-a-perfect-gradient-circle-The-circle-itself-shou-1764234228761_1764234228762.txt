@@ -1,0 +1,11 @@
+"Design a modern, minimalist logo centered within a perfect, gradient circle. The circle itself should transition smoothly from a bright, warm yellow at its top to a deeper, rich orange at its bottom, creating a sense of sunrise or sunset. The background around this central circle should be a solid, light grey color.
+
+Within the lower half of this gradient yellow-orange circle, place the word 'Solstice' in a clean, sans-serif typeface. The font should be black, clear, and unembellished.
+
+Above the word 'Solstice' and slightly overlapping it, create a distinct, abstract icon that represents a rooftop solar array. This icon should consist of three upward-pointing, house-like triangular shapes or arrow-like forms, arranged side-by-side. Each of these three shapes should be composed of smaller, rectangular grid elements, creating the visual impression of solar panels. The color of these solar panel elements should be a muted, earthy brown or dark orange, providing a subtle contrast against the yellow-orange circle.
+
+Connecting the base of the central 'solar array' icon to the left and right, include thin, circuit-like lines that extend slightly outwards. These lines should be very subtle and match the color of the solar panel elements, adding a technological or connectivity aspect to the design.
+
+Ensure the overall composition is balanced, with the 'Solstice' text and the solar array icon comfortably nestled within the yellow-orange circle. The aesthetic should be clean, professional, and convey themes of solar energy, sustainability, and clarity. The entire logo should feel harmonious and visually appealing."Color Hex Codes
+
+Color DescriptionHex CodePurpose in Design ContextBright Sunlight Yellow (Top Gradient)#FFD700Represents the intense peak of the sun (Solstice); the lighter part of the background gradient.Warm Sunset Orange (Bottom Gradient)#FF8C00A rich, warm orange for the lower part of the gradient, adding depth and heat.Muted Solar Panel/Element (Mid-tone)#C85A17A darker, earthy orange-brown for the abstract solar panel icons within the circle.Clean White/Contrast (Optional Text)#FFFFFFCan be used for crisp text or highlights if needed for high contrast.Deep Black (Text/Outline)#000000Ideal for the main 'Solstice' text and sharp outlines for professionalism.
