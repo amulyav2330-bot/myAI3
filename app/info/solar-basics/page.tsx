@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Sun, Zap, RotateCcw, Home, ArrowRight, Battery, Plug } from "lucide-react";
+import { ArrowLeft, Sun, Zap, RotateCcw, Home, ArrowRight, Battery, Plug, Leaf, DollarSign, Flame, Droplets, Wind, CheckCircle } from "lucide-react";
 
 export default function SolarBasicsPage() {
   return (
@@ -47,6 +47,140 @@ export default function SolarBasicsPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Understanding the fundamentals of solar power systems and how they work for your home.
             </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-100 mb-16">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
+                <Leaf className="h-7 w-7 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900">Why Solar Energy?</h2>
+            </div>
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              Solar energy stands out as the most accessible and practical renewable energy source for homeowners. 
+              Here's how it compares to other energy sources:
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <Sun className="h-8 w-8 text-amber-500" />
+                  <h3 className="text-lg font-bold text-gray-900">Solar Energy</h3>
+                </div>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Zero fuel costs - sunlight is free</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Low maintenance, 25+ year lifespan</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Works on your rooftop - no extra land needed</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Government subsidies reduce upfront costs</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Net metering lets you earn from excess power</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <Flame className="h-8 w-8 text-gray-500" />
+                  <h3 className="text-lg font-bold text-gray-900">Coal & Fossil Fuels</h3>
+                </div>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500 mt-0.5 flex-shrink-0">✗</span>
+                    <span>Rising fuel costs increase your bills</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500 mt-0.5 flex-shrink-0">✗</span>
+                    <span>Major source of air pollution and CO2</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500 mt-0.5 flex-shrink-0">✗</span>
+                    <span>Non-renewable - finite resources</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-500 mt-0.5 flex-shrink-0">✗</span>
+                    <span>No control over tariff hikes</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <Wind className="h-8 w-8 text-blue-500" />
+                  <h3 className="text-lg font-bold text-gray-900">Wind Energy</h3>
+                </div>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Clean and renewable</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">△</span>
+                    <span>Requires large open spaces or farms</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">△</span>
+                    <span>Not practical for individual homes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">△</span>
+                    <span>Location-dependent (needs consistent wind)</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-cyan-50 rounded-xl p-6 border border-cyan-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <Droplets className="h-8 w-8 text-cyan-500" />
+                  <h3 className="text-lg font-bold text-gray-900">Hydropower</h3>
+                </div>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Reliable and consistent power</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">△</span>
+                    <span>Requires rivers/water bodies</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">△</span>
+                    <span>Only for utility-scale projects</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">△</span>
+                    <span>Environmental impact on ecosystems</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-r from-amber-100 to-orange-100 rounded-xl p-6 border border-amber-300">
+              <div className="flex items-start gap-4">
+                <DollarSign className="h-10 w-10 text-amber-600 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">The Bottom Line</h3>
+                  <p className="text-gray-700">
+                    <strong>Solar is the only renewable energy you can install on your rooftop today.</strong> Unlike wind 
+                    or hydro that need special locations, solar panels work wherever there's sunlight. With India receiving 
+                    300+ sunny days annually and government subsidies covering up to 40% of costs, solar makes both 
+                    environmental and financial sense for homeowners.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid gap-8 mb-16">
