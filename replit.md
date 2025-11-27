@@ -79,16 +79,29 @@ Solstice is an AI-powered solar energy analysis platform built with Next.js 16. 
 
 ## Recent Changes (November 27, 2025)
 
+### V3.3 - Chat Layout & Solar Mascot
+- Updated chat text alignment to left-aligned for better readability
+- Added animated solar mascot (cute sun character) on right side of chat area in fullscreen mode:
+  - Floating animation with gentle bounce
+  - Rotating sun rays with pulsing glow
+  - Animated face with smile and blinking eyes
+  - "Solstice AI" label underneath
+- Consistent solar theme applied across entire website:
+  - Primary Background: #FFF8E1 (warm light yellow)
+  - Accent Color 1: #FFC107 (gold for highlights)
+  - Accent Color 2: #FF9800 (orange for buttons/accents)
+- 5% opacity solar panel background pattern on:
+  - Home Page (/)
+  - Solar Basics page (/info/solar-basics)
+  - Chat widget
+- Solar Basics page now uses TryDemoButton to open chat widget
+
 ### V3.2 - Chart Generation & UI Improvements
 - Added generateChart tool for rendering actual visual charts (bar, line, comparison)
 - AI now creates real Recharts-based graphs instead of text descriptions for:
   - ROI comparisons (bar chart with kW sizes vs 10-year savings)
   - 10-year savings projections (line charts)
   - Before/after bill comparisons (comparison bar charts)
-- Updated chat UI:
-  - Center-aligned chat text in message wall
-  - Added 5% opacity solar panel background pattern to chat widget
-  - Solar theme colors (#FFF8E1, #FFC107, #FF9800)
 - Fixed "Try Free Demo" button on login page to open chat widget
 - New chat now shows greeting: "Hello! I'm SOLSTICE, an AI assistant helping you to understand the landscape of solar installation. Let's start with your location and consumption."
 
