@@ -1,0 +1,39 @@
+1. What exactly is "Net Metering" and how does it reduce my bill?
+
+Answer: Net Metering connects your solar system to the grid. It tracks both the electricity you use from the grid and the electricity you send back. You only pay for the "Net" difference (Imported - Exported units).
+
+2. How long will it take to recover my investment (ROI)?
+
+Answer: For most homeowners, the Break-even point is between 4 to 5 years. After this period, the electricity generated is effectively free for the remaining lifespan of the panels (25 years). [Visual Trigger: ROI Curve Line Chart]
+
+3. What happens if I generate more electricity than I use in a month?
+
+Answer: The excess units are "banked" with the utility company. These credits are carried forward to adjust against your bill in future months (usually settled at the end of the financial year).
+
+4. Will my solar system work during a power cut?
+
+Answer: Standard Grid-Connected systems shut down during power cuts to prevent electrocuting line workers (Anti-Islanding). To have power during an outage, you need a Hybrid System with batteries.
+
+5. How does Solar help me if I am in a high-consumption tariff slab?
+
+Answer: Solar cuts your grid dependency, removing the "top layer" of your consumption. This often drops you from a high tariff slab (e.g., ₹12/unit) to a lower slab (e.g., ₹7/unit), multiplying your savings. [Visual Trigger: Bill Slab Stepped Chart]
+
+6. Is there a limit to how much solar capacity I can install?
+
+Answer: Yes. According to SERC regulations, you typically cannot install a capacity higher than your Sanctioned Load (the load limit mentioned on your electricity bill).
+
+7. Can our Housing Society install solar for common areas like lifts and pumps?
+
+Answer: Yes. This is highly recommended as common area meters often have high commercial tariffs. Installing solar here significantly reduces monthly maintenance charges for residents.
+
+8. Are there government subsidies available for installation?
+
+Answer: Yes. Under schemes like PM Surya Ghar: Muft Bijli Yojana, subsidies are available (typically up to ₹78,000 for systems up to 3kW) for residential consumers.
+
+9. Does the system require a lot of maintenance?
+
+Answer: Maintenance is minimal. It mainly requires cleaning the panels with water every 2-3 weeks to remove dust and ensure maximum efficiency. There are no moving parts to repair.
+
+10. Is it safe to have a power plant on my roof?
+
+Answer: Yes. Systems must be certified by a licensed electrical inspector. They include heavy-duty safety features like Earthing kits and Lightning Arresters to protect your home.

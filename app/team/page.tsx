@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Linkedin, Brain, Code } from "lucide-react";
+import { ArrowLeft, Linkedin } from "lucide-react";
 
 export default function TeamPage() {
   return (
@@ -45,8 +45,14 @@ export default function TeamPage() {
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-100">
               <div className="flex flex-col items-center text-center mb-6">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-4">
-                  <Brain className="h-16 w-16 text-white" />
+                <div className="w-40 h-40 rounded-full overflow-hidden mb-4 ring-4 ring-amber-200">
+                  <Image
+                    src="/amulya-guduri.jpeg"
+                    alt="Dr. Amulya Guduri"
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900">Dr. Amulya Guduri</h2>
                 <p className="text-[#3498DB] font-medium">CEO, AI & Compliance Strategist</p>
@@ -72,8 +78,14 @@ export default function TeamPage() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-100">
               <div className="flex flex-col items-center text-center mb-6">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#3498DB] to-[#2980B9] flex items-center justify-center mb-4">
-                  <Code className="h-16 w-16 text-white" />
+                <div className="w-40 h-40 rounded-full overflow-hidden mb-4 ring-4 ring-blue-200">
+                  <Image
+                    src="/kruthika-kanduri.png"
+                    alt="Kruthika Kanduri"
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900">Kruthika Kanduri</h2>
                 <p className="text-[#3498DB] font-medium">CTO, Engineering Lead</p>

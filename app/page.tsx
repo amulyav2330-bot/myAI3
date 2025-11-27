@@ -1,7 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sun, Zap, Shield, TrendingUp, Leaf, BookOpen, ArrowRight, Mail, Users, FileText, HelpCircle } from "lucide-react";
+import { Sun, Zap, Shield, TrendingUp, Leaf, BookOpen, ArrowRight, Mail, Users, ChevronDown, HelpCircle } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    question: "What is Solstice and how does it work?",
+    answer: "Solstice is an AI-powered solar energy analysis platform that helps homeowners in Maharashtra understand solar panel installations, calculate ROI, and navigate regulatory requirements including MSEDCL tariffs, MNRE subsidies, and net metering regulations. Simply chat with our AI assistant to get personalized guidance."
+  },
+  {
+    question: "How accurate are the savings estimates?",
+    answer: "Our estimates are based on real-time MSEDCL tariff data, current MNRE subsidy rates, and your specific consumption patterns. While we strive for accuracy, actual savings may vary based on installation quality, weather patterns, and future tariff changes. We recommend using our estimates as a starting point for your solar journey."
+  },
+  {
+    question: "What subsidies are available for rooftop solar in Maharashtra?",
+    answer: "Under the PM Surya Ghar scheme, residential consumers can receive subsidies of up to 40% for systems up to 3kW, and 20% for systems between 3-10kW. Solstice helps you understand exactly how much subsidy you qualify for based on your system size and location."
+  },
+  {
+    question: "What is net metering and how does it benefit me?",
+    answer: "Net metering allows you to sell excess solar power back to MSEDCL at a predetermined rate. When your solar panels produce more electricity than you consume, the surplus is exported to the grid and credited to your account. This can significantly reduce or even eliminate your electricity bills."
+  },
+  {
+    question: "How long does it take to recover the investment in solar panels?",
+    answer: "For most residential installations in Maharashtra, the payback period ranges from 4-6 years, depending on your system size, electricity consumption, and current tariff slab. After the payback period, you enjoy essentially free electricity for the remaining 20+ years of panel life."
+  },
+  {
+    question: "What size solar system do I need for my home?",
+    answer: "The ideal system size depends on your monthly electricity consumption, available roof space, and budget. As a rule of thumb, a 1kW system generates approximately 4-5 units per day. Our AI assistant can help you calculate the optimal system size based on your electricity bills and requirements."
+  },
+  {
+    question: "Do I need battery storage with my solar system?",
+    answer: "For grid-connected systems with net metering in Maharashtra, battery storage is optional. The grid acts as your virtual battery - you export excess power during the day and draw from the grid at night. However, batteries can provide backup during power outages if that's a concern in your area."
+  },
+  {
+    question: "What maintenance do solar panels require?",
+    answer: "Solar panels require minimal maintenance. Regular cleaning (every 2-3 weeks) to remove dust and debris, periodic inspection of connections, and annual professional check-ups are typically sufficient. Most quality panels come with 25-year performance warranties."
+  },
+  {
+    question: "What approvals are needed for rooftop solar installation?",
+    answer: "You'll need approval from MSEDCL for grid connectivity and net metering. Depending on your location, you may also need NOC from your housing society or local authorities. Solstice guides you through the entire approval process and documentation requirements."
+  },
+  {
+    question: "Can Solstice help me find solar installers?",
+    answer: "Currently, Solstice focuses on providing comprehensive solar feasibility analysis, ROI calculations, and regulatory guidance. While we don't directly connect you with installers, our detailed reports help you make informed decisions and ask the right questions when engaging with solar vendors."
+  }
+];
 
 export default function LandingPage() {
   return (
@@ -74,7 +123,7 @@ export default function LandingPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-                Unlock maximum savings and power your future with regulatory-backed AI analysis.
+                We demystify solar—from tariff slabs to subsidies—with AI-driven clarity. Get the precise budget, roadmap, and knowledge you need to start generating your own power today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/auth/login">
@@ -199,6 +248,38 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex justify-center mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                  <HelpCircle className="h-7 w-7 text-white" />
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Everything you need to know about solar energy and how Solstice can help you
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg border border-orange-100 overflow-hidden">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-orange-100 last:border-0">
+                    <AccordionTrigger className="px-6 py-4 hover:bg-amber-50/50 text-left font-medium text-gray-900">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-600">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>

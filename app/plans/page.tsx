@@ -54,8 +54,8 @@ export default function PlansPage() {
                 </div>
               </div>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">$0</span>
-                <span className="text-gray-500">/month</span>
+                <span className="text-4xl font-bold text-gray-900">Free</span>
+                <span className="text-gray-500">/forever</span>
               </div>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-3">
@@ -104,7 +104,7 @@ export default function PlansPage() {
                 </div>
               </div>
               <div className="mb-6">
-                <span className="text-4xl font-bold">$29</span>
+                <span className="text-4xl font-bold">₹999</span>
                 <span className="text-white/80">/month</span>
               </div>
               <ul className="space-y-4 mb-8">
