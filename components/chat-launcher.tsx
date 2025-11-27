@@ -63,7 +63,6 @@ export function ChatLauncher() {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [durations, setDurations] = useState<Record<string, number>>({});
-  const [hasAutoGreeted, setHasAutoGreeted] = useState(false);
   const welcomeMessageShownRef = useRef<boolean>(false);
 
   const stored = typeof window !== "undefined" ? loadMessagesFromStorage() : { messages: [], durations: {} };
@@ -77,9 +76,6 @@ export function ChatLauncher() {
     setIsClient(true);
     setDurations(stored.durations);
     setMessages(stored.messages);
-    
-    const hasGreeted = localStorage.getItem("solstice-auto-greeted");
-    if (hasGreeted) setHasAutoGreeted(true);
   }, []);
 
   useEffect(() => {
@@ -87,19 +83,6 @@ export function ChatLauncher() {
       saveMessagesToStorage(messages, durations);
     }
   }, [durations, messages, isClient]);
-
-  useEffect(() => {
-    if (isClient && !hasAutoGreeted) {
-      const timer = setTimeout(() => {
-        if (!isOpen) {
-          setIsOpen(true);
-          localStorage.setItem("solstice-auto-greeted", "true");
-          setHasAutoGreeted(true);
-        }
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [isClient, hasAutoGreeted, isOpen]);
 
   useEffect(() => {
     const handleOpenChat = () => {
@@ -155,25 +138,42 @@ export function ChatLauncher() {
 
   if (!isClient) return null;
 
-  const widgetSize = isFullScreen
-    ? "fixed inset-4 md:inset-8 z-[9999]"
-    : "fixed bottom-4 right-4 w-[380px] h-[550px] z-[9999]";
-
   return (
     <>
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-4 right-4 z-[9999] flex items-center gap-2 px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          style={{ backgroundColor: "#FF9800" }}
+          className="flex items-center gap-2 px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+          style={{ 
+            position: "fixed", 
+            bottom: "20px", 
+            right: "20px", 
+            zIndex: 9999,
+            backgroundColor: "#FF9800" 
+          }}
         >
           <MessageCircle className="h-5 w-5 text-white" />
-          <span className="text-white font-medium">Chat with Solstice AI</span>
+          <span className="text-white font-medium hidden sm:inline">Chat with Solstice AI</span>
+          <span className="text-white font-medium sm:hidden">Chat</span>
         </button>
       )}
 
       {isOpen && (
-        <div className={`${widgetSize} flex flex-col rounded-2xl shadow-2xl overflow-hidden border border-orange-200 relative`} style={{ backgroundColor: "#FFF8E1" }}>
+        <div 
+          className="flex flex-col rounded-2xl shadow-2xl overflow-hidden border border-orange-200"
+          style={{ 
+            position: "fixed",
+            bottom: isFullScreen ? "16px" : "20px",
+            right: isFullScreen ? "16px" : "20px",
+            top: isFullScreen ? "16px" : "auto",
+            left: isFullScreen ? "16px" : "auto",
+            width: isFullScreen ? "auto" : "380px",
+            height: isFullScreen ? "auto" : "550px",
+            maxHeight: isFullScreen ? "none" : "calc(100vh - 100px)",
+            zIndex: 9999,
+            backgroundColor: "#FFF8E1"
+          }}
+        >
           <div 
             className="absolute inset-0 opacity-[0.05] pointer-events-none rounded-2xl"
             style={{

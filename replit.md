@@ -79,6 +79,13 @@ Solstice is an AI-powered solar energy analysis platform built with Next.js 16. 
 
 ## Recent Changes (November 27, 2025)
 
+### V3.4 - Fixed Chat Widget Positioning
+- Fixed chatbot button positioning with `position: fixed; bottom: 20px; right: 20px; z-index: 9999`
+- Removed auto-open popup functionality - chat only opens when user clicks
+- Chat window is fixed to the right side, slides in above main content
+- Mobile responsive: shorter text on small screens ("Chat" instead of "Chat with Solstice AI")
+- Chat window has max-height to prevent overlapping footer on smaller screens
+
 ### V3.3 - Chat Layout & Solar Mascot
 - Updated chat text alignment to left-aligned for better readability
 - Added animated solar mascot (cute sun character) on right side of chat area in fullscreen mode:
