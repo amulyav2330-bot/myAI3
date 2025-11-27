@@ -101,6 +101,14 @@ export function ChatLauncher() {
   }, [isClient, hasAutoGreeted, isOpen]);
 
   useEffect(() => {
+    const handleOpenChat = () => {
+      setIsOpen(true);
+    };
+    window.addEventListener("openSolsticeChat", handleOpenChat);
+    return () => window.removeEventListener("openSolsticeChat", handleOpenChat);
+  }, []);
+
+  useEffect(() => {
     if (isOpen && isClient && initialMessages.length === 0 && !welcomeMessageShownRef.current) {
       const welcomeMessage: UIMessage = {
         id: `welcome-${Date.now()}`,

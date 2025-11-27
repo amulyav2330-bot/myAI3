@@ -87,6 +87,11 @@ Solstice is an AI-powered solar energy analysis platform built with Next.js 16. 
   - Quick-start buttons: Estimate Savings, Subsidies, Net Metering, Get Report
   - Auto-greeting after 4 seconds for new visitors
   - Session persistence across page navigation
+- Updated landing page navigation:
+  - Removed redundant blue "Try Demo" button from header
+  - Connected hero "Try Free Demo" button to open chat widget
+  - Connected bottom "Try Free Demo Now" button to open chat widget
+  - TryDemoButton component dispatches custom event to open ChatLauncher
 - Added comprehensive safety guardrails to chatbot:
   - Hallucination control (RAG enforcement)
   - AI identity disclosure

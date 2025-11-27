@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sun, Zap, Shield, TrendingUp, Leaf, BookOpen, ArrowRight, Mail, Users, ChevronDown, HelpCircle } from "lucide-react";
+import { Zap, Shield, TrendingUp, Leaf, BookOpen, ArrowRight, Mail, Users, ChevronDown, HelpCircle } from "lucide-react";
+import { TryDemoButton } from "@/components/try-demo-button";
 import {
   Accordion,
   AccordionContent,
@@ -97,11 +98,6 @@ export default function LandingPage() {
                   Sign In
                 </Button>
               </Link>
-              <Link href="/app/chat/demo">
-                <Button className="bg-[#3498DB] hover:bg-[#2980B9] text-white">
-                  Try Demo
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
@@ -141,12 +137,7 @@ export default function LandingPage() {
                     View Plans
                   </Button>
                 </Link>
-                <Link href="/app/chat/demo">
-                  <Button size="lg" className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-8 py-6 text-lg">
-                    Try Free Demo
-                    <Sun className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                <TryDemoButton size="lg" className="px-8 py-6 text-lg" />
               </div>
             </div>
           </div>
@@ -296,12 +287,14 @@ export default function LandingPage() {
             <p className="text-xl text-white/90 mb-10">
               Join thousands of homeowners who are saving money and the planet with Solstice.
             </p>
-            <Link href="/app/chat/demo">
-              <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-6 text-lg font-semibold">
-                Try Free Demo Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            <TryDemoButton 
+              size="lg" 
+              className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-6 text-lg font-semibold !from-white !to-white" 
+              showIcon={false}
+            >
+              Try Free Demo Now
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </TryDemoButton>
           </div>
         </section>
       </main>
