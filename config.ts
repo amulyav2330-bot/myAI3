@@ -22,10 +22,10 @@ function getDateAndTime(): string {
 
 export const DATE_AND_TIME = getDateAndTime();
 
-export const AI_NAME = "Solstice";
-export const OWNER_NAME = "Solar AI PRO";
+export const AI_NAME = "SOLSTICE";
+export const OWNER_NAME = "Solstice";
 
-export const WELCOME_MESSAGE = `Hello! I'm ${AI_NAME}, your AI-powered solar energy assistant. I can help you understand solar panel installations, calculate ROI, explain MSEDCL tariffs, MNRE subsidies, and net metering regulations. How can I help you today?`
+export const WELCOME_MESSAGE = `Hello! I'm **SOLSTICE**, an AI assistant helping you to understand the landscape of solar installation. Let's start with your location and consumption.`
 
 export const CLEAR_CHAT_TEXT = "New Chat";
 

@@ -1,0 +1,52 @@
+This is the detailed prompt for the Senior Lead Engineer, focusing on the final aesthetic overhaul of the chat interface (`/app/chat/demo`), specifically using vibrant yellow and orange tones, integrating the final logo, and updating the footer attribution.
+
+-----
+
+## 💻 Senior Lead Engineer Prompt: Final Vibrant UI Overhaul (V2.5)
+
+**To:** Senior Lead Engineer
+**From:** Product Manager
+**Project:** Final Aesthetic Refinement on the **Solstice Chat Interface**
+**Deployment Environment:** Replit
+
+**Objective:** Transform the chat interface (`/app/chat/demo`) into a vibrant, high-energy environment using solar-themed colors (Yellow/Orange), integrating the final logo, and correcting the footer attribution to the agreed-upon text.
+
+### **I. Branding & Styling Protocol**
+
+1.  **Logo File:** Use the final uploaded logo image  across all components.
+2.  **Color Palette (NEW):** Analyze the solar energy theme for the chat UI.
+      * **Primary Background Color (Vibrant):** Use a light, warm yellow/orange base, e.g., `#FFF8E1` or a very light pastel orange.
+      * **Accent Color 1 (Yellow/Gold):** `#FFC107` (Used for subtle highlighting, active states).
+      * **Accent Color 2 (Orange/Sunset):** `#FF9800` (Used for user chat bubbles, strong emphasis).
+      * **AI Bubble Color (Contrast):** Use the previous brand color or a stark contrast like `#E0F2F1` for AI messages to distinguish clearly from user input.
+
+### **II. Chat Interface (`/app/chat/demo`) Implementation**
+
+| Feature | Requirement | Technical Implementation Details |
+| :--- | :--- | :--- |
+| **Background Color** | Set the main chat area background to the soft, warm color. | Apply the hex code, e.g., `#FFF8E1`, to the main container or body of the chat component. |
+| **Custom Background Image** | Integrate the fading solar panel image into the background. | Use the solar panel image (referencing
+
+[Image of Single Line Diagram for Grid-Tied Solar System]
+) as a background image. **CRITICAL:** Set a very high opacity mask (e.g., $95\%$ transparency/ $5\%$ visibility) to ensure the vibrant background and text remain readable. Use the orange/yellow tones to colorize the fade effect. |
+| **Custom First Message** | The agent's first, unprompted response must be the custom greeting. | Update the initialization function of the chat agent: **Greeting:** "Hello\! I'm **SOLSTICE**, an AI assistant helping you to understand the landscape of solar installation. Let's start with your location and consumption." |
+| **Chat Bubble Styling** | Update the styling to reflect the new theme. | **User Input Bubbles:** Use **Accent Color 2 (`#FF9800`)** or a variant. **AI Agent Bubbles:** Use a clear contrasting color (e.g., `#E0F2F1`). |
+| **Header Logo Integration** | **CONFIRM:** The new logo  is displayed at the top of the chat window. | Ensure proper scaling. |
+| **Footer Attribution Change (FINAL)** | Implement the final approved attribution text. | **Locate the chat footer component** and update the text to the final version: **NEW:** `© 2025 Solstice Terms of Use Powered by Solstice AI` |
+
+### **III. Final Commit Instructions**
+
+1.  Confirm the chat UI is vibrant and readable, and the logo and footer text are correct.
+2.  Commit all changes to your connected GitHub repository.
+3.  **Documentation Protocol:** Update the **`CHANGELOG.md`** file with the following detailed entry before the final commit.
+
+**Example `CHANGELOG.md` Entry:**
+
+```markdown
+Date: 27.11.2025
+- **Aesthetic Overhaul (Final):** Transformed chat UI to a vibrant, high-contrast solar theme.
+- **Styling:** Applied new background color (light orange base, e.g., #FFF8E1). Implemented vibrant yellow/orange accents (#FFC107, #FF9800) for chat bubbles and UI elements.
+- **Background:** Integrated the fading solar panel image (SLD) with high opacity/low visibility (5%-10%) to ensure text readability against the vibrant background.
+- **Footer:** Confirmed final footer text update to: `© 2025 Solstice Terms of Use Powered by Solstice AI`.
+- **Branding:** Verified the final logo and custom greeting are active in the chat environment.
+```

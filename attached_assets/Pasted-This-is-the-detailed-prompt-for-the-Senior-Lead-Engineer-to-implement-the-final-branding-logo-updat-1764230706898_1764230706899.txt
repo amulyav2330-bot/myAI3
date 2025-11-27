@@ -1,0 +1,56 @@
+This is the detailed prompt for the Senior Lead Engineer to implement the final branding, logo update, and custom styling within the chat interface (`/app/chat/demo`), specifically using the colors derived from your new logo image.
+
+This prompt is designed to avoid ambiguity in the Replit environment.
+
+-----
+
+## 💻 Senior Lead Engineer Prompt: Final Branding & Chat UI Refinement (V2.2)
+
+**To:** Senior Lead Engineer
+**From:** Product Manager
+**Project:** Final UI/UX Polish on the **Solstice Chat Interface**
+**Deployment Environment:** Replit
+
+**Objective:** Implement the final logo, background styling, and custom greeting within the chat application to enhance brand presence and user engagement.
+
+### **I. Branding & Styling Protocol**
+
+1.  **Logo Update (CRITICAL):**
+      * **Replace** the existing logo file across all pages (especially the header component) with the newly uploaded logo image .
+2.  **Color Extraction:**
+      * Analyze the new logo image. For styling purposes, use the following representative hex codes derived from the logo's color palette:
+          * **Primary Brand Accent (Deep Blue/Teal):** `#00796B` (Used for chat accents, buttons).
+          * **Secondary Brand Accent (Warm Gold/Yellow):** `#FFB300` (Used for subtle highlighting).
+          * **Background Accent (Light Grey/Blue Tint):** `#F0F4F8` (Used for main chat background).
+
+### **II. Chat Interface (`/app/chat/demo`) Implementation**
+
+The existing functionality must be preserved. Only styling and the initial message are being updated.
+
+| Feature | Requirement | Technical Implementation Details |
+| :--- | :--- | :--- |
+| **Header Logo Integration** | Display the new logo image  prominently at the **top center or top left** of the chat window interface. | Ensure the logo scales correctly on mobile devices without distortion. |
+| **Custom Background & Fade** | Add a custom, visually appealing background to the main chat area. | Use a **slowly fading, low-opacity background image** of a generic solar panel array or a symbolic sun/power diagram
+
+[Image of Single Line Diagram for Grid-Tied Solar System]
+in the chat area's CSS. Apply a strong **CSS opacity mask** (e.g., $5\%$-$10\%$) so the background is present but does not interfere with reading the text. |
+| **Background Color** | Set the main chat area background to the soft brand accent color (`#F0F4F8`). | Apply this hex code to the main container or body of the chat component. |
+| **Custom First Message** | The agent's first, unprompted response to the user must be the custom greeting. | Update the initial state or initialization function of the chat agent: **Output:** "Hello\! I'm **SOLSTICE**, an AI assistant helping you to understand the landscape of solar installation. Let's start with your location and consumption." |
+| **Chat Bubble Styling** | Update the styling of the *AI agent's* response bubbles to incorporate the **Primary Brand Accent** (`#00796B`) for a professional, branded look. | Use the hex code for the background color of the AI's message bubbles. |
+
+### **III. Final Commit Instructions**
+
+1.  Confirm the new logo is correctly displayed on all pages (header, chat, etc.).
+2.  Verify the chat background is present but subtle, using the specified hex codes.
+3.  Commit all code and styling changes to your connected GitHub repository.
+4.  **Documentation Protocol:** Update the **`CHANGELOG.md`** file with the following detailed entry before the final commit.
+
+**Example `CHANGELOG.md` Entry:**
+
+```markdown
+Date: 27.11.2025
+- **Branding:** Replaced all logo instances with the final V2.2 image.
+- **UI/UX:** Applied final branding stylesheet using derived hex codes (#00796B, #FFB300).
+- **Chat UI:** Implemented custom, faded solar panel background image and set soft background color (#F0F4F8).
+- **Functionality:** Updated the agent's initial greeting to the custom "Hello! I'm SOLSTICE..." message.
+```
